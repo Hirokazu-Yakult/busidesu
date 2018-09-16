@@ -1,37 +1,24 @@
-# Copyright 2015-2016, Google, Inc.
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+runtime: node.js
+api_version: 1
+threadsafe: true
 
-sudo: false
-language: node_js
-node_js:
-- "6"
+handlers:
+- url: /
+  script: home.app
 
-cache:
-  directories:
-  - node_modules/
+- url: /index\.html
+  script: home.app
 
-env:
-  global:
-    - GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/key.json
-    - TEST_BUCKET_NAME=nodejs-docs-samples
-    - GCLOUD_PROJECT=nodejs-docs-samples
+- url: /stylesheets
+  static_dir: stylesheets
 
-before_install:
-  - openssl aes-256-cbc -K $encrypted_fda0b707c7d5_key -iv $encrypted_fda0b707c7d5_iv -in key.json.enc -out key.json -d
-  - npm install -g npm
-  - npm set progress=false
+- url: /(.*\.(gif|png|jpg))$
+  static_files: static/\1
+  upload: static/.*\.(gif|png|jpg)$
 
-before_script:
-  - node scripts/install
+- url: /admin/.*
+  script: admin.app
+  login: admin
 
-script: npm test
+- url: /.*
+  script: not_found.app
