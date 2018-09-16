@@ -1,4 +1,4 @@
-runtime: node_js
+runtime: nodejs8
 api_version: 1
 threadsafe: true
 
