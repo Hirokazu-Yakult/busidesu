@@ -15,7 +15,7 @@ const bot = line_config({
 const linebotParser = bot.parser();
 app.post('/home/yatsunami_okashi', linebotParser);
 bot.on('message', function (event) {
-  event.reply([
+  event.replyMessage([
     
 {
   "type": "template",
