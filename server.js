@@ -6,11 +6,10 @@ const app = express();
 
 // -----------------------------------------------------------------------------
 // パラメータ設定
-const bot = linebot({
-  channelId: process.env.CHANNEL_ID,
-  channelSecret: process.env.CHANNEL_SECRET,
-  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
-  verify: true
+const bot = line_config({
+    channelId: process.env.CHANNEL_ID,
+    channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN, // 環境変数からアクセストークンをセットしています
+    channelSecret: process.env.CHANNEL_SECRET // 環境変数からChannel Secretをセットしています
 });
 
 const linebotParser = bot.parser();
