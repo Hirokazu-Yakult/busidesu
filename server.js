@@ -29,16 +29,16 @@ bot.on('message', function (event) {
             "imageUrl": "https://2.bp.blogspot.com/-BaWGrzEtU6k/W4nphK6gdpI/AAAAAAABOQc/K7kSGUhwnjgkOxsHy96fy5B_kGYtcsJiACLcBGAs/s800/yumekawa_girl.png",
             "action": {
               "type": "message",
-              "label": "ƒuƒWƒfƒX",
-    @@@@"text": "ƒuƒWƒfƒX"
+              "label": "ãƒ–ã‚¸ãƒ‡ã‚¹",
+    ã€€ã€€ã€€ã€€"text": "ãƒ–ã‚¸ãƒ‡ã‚¹"
             }
           },
           {
             "imageUrl": "https://3.bp.blogspot.com/-xhpgn0lt3Wc/VCkbPlPIc8I/AAAAAAAAnDk/IfnflzkRqUw/s800/pet_byouki_cat.png",
             "action": {
               "type": "message",
-              "label": "ƒ_ƒƒfƒX",
-              "text": "ƒ_ƒƒfƒX"
+              "label": "ãƒ€ãƒ¡ãƒ‡ã‚¹",
+              "text": "ãƒ€ãƒ¡ãƒ‡ã‚¹"
             }
           }
       ]
