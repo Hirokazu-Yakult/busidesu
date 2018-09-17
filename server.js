@@ -1,9 +1,11 @@
-const express = require('express');
-const linebot = require('linebot');
 require ('dotenv').config();
- 
-const app = express();
+const line = require('@line/bot-sdk');
+const linebot = require('linebot');
+const express = require('express');
+
   
+const app = express();
+
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
   channelSecret: process.env.CHANNEL_SECRET,
@@ -12,7 +14,7 @@ const bot = linebot({
 });
   
 const linebotParser = bot.parser();
-app.post('/', linebotParser);
+app.post('/home/yatsunami_okashi', linebotParser);
  
 bot.on('message', function (event) {
   event.reply([
