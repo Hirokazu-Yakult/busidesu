@@ -1,10 +1,8 @@
 const linebot = require('linebot');
 const express = require('express');
-
-// -----------------------------------------------------------------------------
-// モジュールのインポート
-const server = require("express")();
-const line = require("@line/bot-sdk"); // Messaging APIのSDKをインポート
+require ('dotenv').config();
+const app = express();
+  
 
 // -----------------------------------------------------------------------------
 // パラメータ設定
