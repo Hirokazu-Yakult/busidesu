@@ -1,11 +1,9 @@
-require ('dotenv').config();
-const line = require('@line/bot-sdk');
-const linebot = require('linebot');
 const express = require('express');
-
-  
+const linebot = require('linebot');
+require ('dotenv').config();
+ 
 const app = express();
-
+  
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
   channelSecret: process.env.CHANNEL_SECRET,
