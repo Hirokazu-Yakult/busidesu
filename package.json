@@ -1,7 +1,7 @@
 {
     "name": "function-1", 
     "version": "0.1.0", 
-    "main": "index.js", 
+    "main": "server.js", 
     "dependencies": {
         "@line/bot-sdk": "^6.2.1",
       	"express": "^4.16.3",
